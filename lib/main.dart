@@ -1,3 +1,4 @@
+import 'package:e_commerce/core/shared/theme/colors_app.dart';
 import 'package:e_commerce/core/utils/go_router/app_go_router.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,9 @@ class Ecommerce extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: ThemeData.light().copyWith(
+        scaffoldBackgroundColor: ColorsApp.kPrimaryColor,
+      ),
       debugShowCheckedModeBanner: false,
       routerConfig: AppRouter.router,
     );
