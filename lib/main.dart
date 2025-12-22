@@ -1,4 +1,4 @@
-import 'package:e_commerce/features/splash/presentation/views/splash_view.dart';
+import 'package:e_commerce/core/utils/go_router/app_go_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +10,9 @@ class Ecommerce extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: SplashView(),
+      routerConfig: AppRouter.router,
     );
   }
 }
