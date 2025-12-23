@@ -15,6 +15,7 @@ class UibodyOnboarding extends StatelessWidget {
     required this.elevatedtext,
     required this.buttomtext,
     required this.onpressedtext,
+    required this.numberVisibility,
   });
   final String onImage;
   final String title;
@@ -24,6 +25,7 @@ class UibodyOnboarding extends StatelessWidget {
   final String elevatedtext;
   final VoidCallback onpressedtext;
   final String buttomtext;
+  final int numberVisibility;
 
   @override
   Widget build(BuildContext context) {
@@ -60,11 +62,14 @@ class UibodyOnboarding extends StatelessWidget {
         CustomSmoothpage(controller: controller),
         Gap(40),
         CustomElevatedbuttom(onpressed: onpressedbuttom, text: elevatedtext),
-        TextButton(
-          onPressed: onpressedtext,
-          child: Text(
-            buttomtext,
-            style: TextStyle(color: ColorsApp.kbuttomColor),
+        Visibility(
+          visible: numberVisibility != 0,
+          child: TextButton(
+            onPressed: onpressedtext,
+            child: Text(
+              buttomtext,
+              style: TextStyle(color: ColorsApp.kbuttomColor),
+            ),
           ),
         ),
       ],

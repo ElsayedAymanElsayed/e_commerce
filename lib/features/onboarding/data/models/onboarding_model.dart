@@ -20,14 +20,14 @@ class OnboardingModel {
       description:
           'Find your favorite items easily and place your order in seconds.',
       bottomText: 'Next',
-      skiptext: 'Skip',
+      skiptext: 'back',
     ),
     OnboardingModel(
       image: 'assets/images/image_woman.png',
       titel: 'Track Your Order',
       description: 'Track your order live and know exactly when it arrives',
       bottomText: 'Next',
-      skiptext: 'Skip',
+      skiptext: 'back',
     ),
     OnboardingModel(
       image: 'assets/images/image_shop.png',
@@ -35,7 +35,7 @@ class OnboardingModel {
       description:
           'Choose delivery or pick up your order securely from the store',
       bottomText: 'Get Started',
-      skiptext: 'Skip',
+      skiptext: 'back',
     ),
   ];
 }
