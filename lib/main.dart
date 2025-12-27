@@ -1,6 +1,7 @@
 import 'package:e_commerce/core/shared/theme/colors_app.dart';
 import 'package:e_commerce/core/utils/go_router/app_go_router.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const Ecommerce());
@@ -14,13 +15,18 @@ class Ecommerce extends StatelessWidget {
     return MaterialApp.router(
       theme: ThemeData.light().copyWith(
         scaffoldBackgroundColor: ColorsApp.kPrimaryColorWhite,
-        textTheme: TextTheme(
-          headlineLarge: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
-            color: ColorsApp.kbuttomColorblue,
+        textTheme: GoogleFonts.poppinsTextTheme(
+          ThemeData.light().textTheme.copyWith(
+            headlineLarge: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 22,
+              color: ColorsApp.kbuttomColorblue,
+            ),
+            headlineMedium: const TextStyle(
+              color: ColorsApp.kGray,
+              fontSize: 16,
+            ),
           ),
-          headlineMedium: const TextStyle(color: ColorsApp.kGray, fontSize: 16),
         ),
       ),
       debugShowCheckedModeBanner: false,

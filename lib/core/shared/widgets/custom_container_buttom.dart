@@ -21,11 +21,11 @@ class CustomContainerButtom extends StatelessWidget {
       onTap: ontap,
       child: Container(
         height: 50,
-        width: MediaQuery.of(context).size.width * .80,
+        width: MediaQuery.of(context).size.width * .90,
         decoration: BoxDecoration(
           border: border,
           color: backgroundColor,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(12),
         ),
         child: Center(
           child: Customtext(
