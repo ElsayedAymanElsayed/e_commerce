@@ -1,6 +1,6 @@
 // ignore_for_file: strict_top_level_inference
+import 'package:e_commerce/core/utils/constants/assets_app.dart';
 import 'package:e_commerce/core/utils/constants/const_app_router.dart';
-import 'package:e_commerce/features/splash/presentation/views/splash_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -24,7 +24,7 @@ class _BodySplashViewState extends State<BodySplashView> {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [Center(child: Image.asset(SplashAssets.kLogo))],
+      children: [Center(child: Image.asset(AssetsApp.kLogo))],
     );
   }
 

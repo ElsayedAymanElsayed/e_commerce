@@ -42,7 +42,7 @@ class _PageViewOnboardingState extends State<PageViewOnboarding> {
           controller: controller,
           onpressedbuttom: () {
             if (index == data.length - 1) {
-              GoRouter.of(context).go(ConstAppRouter.idLoginview);
+              GoRouter.of(context).push(ConstAppRouter.idloginorRegister);
             } else {
               goToanimatePage(selected + 1);
             }

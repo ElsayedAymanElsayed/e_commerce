@@ -39,19 +39,12 @@ class UibodyOnboarding extends StatelessWidget {
           height: MediaQuery.of(context).size.height * .3,
         ),
         Gap(50),
-        Text(
-          title,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
-            color: ColorsApp.kbuttomColor,
-          ),
-        ),
+        Text(title, style: Theme.of(context).textTheme.headlineLarge),
         Gap(10),
         SizedBox(
           width: MediaQuery.of(context).size.width * .7,
           child: Text(
-            style: const TextStyle(color: Colors.black45, fontSize: 16),
+            style: Theme.of(context).textTheme.headlineMedium,
             description,
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
@@ -66,10 +59,7 @@ class UibodyOnboarding extends StatelessWidget {
           visible: numberVisibility != 0,
           child: TextButton(
             onPressed: onpressedtext,
-            child: Text(
-              buttomtext,
-              style: TextStyle(color: ColorsApp.kbuttomColor),
-            ),
+            child: Text(buttomtext, style: TextStyle(color: ColorsApp.kGray)),
           ),
         ),
       ],

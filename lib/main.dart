@@ -13,7 +13,15 @@ class Ecommerce extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: ThemeData.light().copyWith(
-        scaffoldBackgroundColor: ColorsApp.kPrimaryColor,
+        scaffoldBackgroundColor: ColorsApp.kPrimaryColorWhite,
+        textTheme: TextTheme(
+          headlineLarge: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+            color: ColorsApp.kbuttomColorblue,
+          ),
+          headlineMedium: const TextStyle(color: ColorsApp.kGray, fontSize: 16),
+        ),
       ),
       debugShowCheckedModeBanner: false,
       routerConfig: AppRouter.router,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 abstract class ColorsApp {
-  static const Color kPrimaryColor = Color(0xfff5f5f5);
-  static const Color kbuttomColor = Color(0xff673AB7);
+  static const Color kPrimaryColorWhite = Color(0xffffffff);
+  static const Color kbuttomColorblue = Color(0xff1F41BB);
+  static const Color kTextfieldColor = Color(0xffF1F4FF);
+  static const MaterialColor kGray = Colors.grey;
 }
