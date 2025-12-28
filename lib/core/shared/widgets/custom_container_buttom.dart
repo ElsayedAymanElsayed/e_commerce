@@ -1,20 +1,17 @@
-import 'package:e_commerce/core/shared/widgets/customtext.dart';
 import 'package:flutter/material.dart';
 
 class CustomContainerButtom extends StatelessWidget {
   const CustomContainerButtom({
     super.key,
     required this.backgroundColor,
-    required this.text,
     this.ontap,
     this.border,
-    this.colortext = Colors.white,
+    required this.widget,
   });
   final Color backgroundColor;
   final VoidCallback? ontap;
-  final String text;
   final BoxBorder? border;
-  final Color colortext;
+  final Widget widget;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -27,13 +24,7 @@ class CustomContainerButtom extends StatelessWidget {
           color: backgroundColor,
           borderRadius: BorderRadius.circular(12),
         ),
-        child: Center(
-          child: Customtext(
-            text: text,
-            fontweight: FontWeight.bold,
-            color: colortext,
-          ),
-        ),
+        child: Center(child: widget),
       ),
     );
   }

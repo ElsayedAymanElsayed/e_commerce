@@ -1,5 +1,4 @@
 import 'package:e_commerce/core/shared/widgets/custom_row_icon_back.dart';
-import 'package:e_commerce/features/auth/login/ui/widgets/custom_container_login_view.dart';
 import 'package:e_commerce/features/auth/login/ui/widgets/custom_text_login_view.dart';
 import 'package:e_commerce/features/auth/login/ui/widgets/custom_textform_field_login_view.dart';
 import 'package:flutter/material.dart';
@@ -22,8 +21,6 @@ class UiBodyLoginView extends StatelessWidget {
               CustomTextLoginView(),
               Gap(30),
               CustomTextformFieldLoginView(),
-              Gap(30),
-              CustomContainerLoginView(),
             ],
           ),
         ),

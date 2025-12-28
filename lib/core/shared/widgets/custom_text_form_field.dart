@@ -5,19 +5,22 @@ class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
     required this.hint,
-    required this.iconButton,
+    this.iconButton,
     this.textInputType,
     this.validtion,
     this.onsaved,
+    this.obscureText = false,
   });
   final String hint;
-  final IconButton iconButton;
+  final IconButton? iconButton;
   final TextInputType? textInputType;
   final String? Function(String?)? validtion;
   final void Function(String?)? onsaved;
+  final bool obscureText;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
       onSaved: onsaved,
       validator: validtion,
       keyboardType: textInputType,
@@ -34,6 +37,8 @@ class CustomTextFormField extends StatelessWidget {
         border: borderTextformfield(ColorsApp.kGray),
         enabledBorder: borderTextformfield(ColorsApp.kTextfieldColor),
         focusedBorder: borderTextformfield(ColorsApp.kbuttomColorblue),
+        errorBorder: borderTextformfield(Colors.red),
+        focusedErrorBorder: borderTextformfield(Colors.red),
       ),
     );
   }

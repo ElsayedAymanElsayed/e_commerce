@@ -3,4 +3,5 @@ class ConstAppRouter {
   static const idOnboardingView = '/onboardingview';
   static const idLoginview = '/loginview';
   static const idloginorRegister = '/loginorRegister';
+  static const idRegisterView = '/Registerview';
 }
